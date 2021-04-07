@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import DisplayUser from './DisplayUser';
-import {BrowserRouter as Router , Route, Link, Switch, withRouter} from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
 
 class UsersApi extends React.Component{
 
@@ -19,19 +19,15 @@ this.requestUsersApi().then(response =>{this.setState({users:response})}).catch(
 render(){
 
    return( 
-   <Router>
-    <div> 
+  
+        
         <div>
         {this.state.users.map(user => {
-              
                return  <ul><li><Link to={`/users/name/${user.id}`}>{user.name}</Link></li></ul>     
         })}
-          <Route exact path="/users/name/:id"><DisplayUser /></Route>
-        </div>
-     
-    </div>
+         </div>
+  
 
-    </Router>
     )
   
 

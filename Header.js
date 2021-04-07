@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
 class HeaderComponent extends React.Component{
@@ -17,12 +18,12 @@ class HeaderComponent extends React.Component{
               </div>
 
               <ul className="navbarHeader-listU">
-                  <li className="navbarHeader-listU--item"><a href="/post" className="navbarHeader-listU--item-link">Post</a></li>
-                  <li className="navbarHeader-listU--item"><a href="#" className="navbarHeader-listU--item-link">Comments</a></li>
-                  <li className="navbarHeader-listU--item"><a href="#" className="navbarHeader-listU--item-link">Albums</a></li>
-                  <li className="navbarHeader-listU--item"><a href="#" className="navbarHeader-listU--item-link">Photos</a></li>
-                  <li className="navbarHeader-listU--item"><a href="#" className="navbarHeader-listU--item-link">Todos</a></li>
-                  <li className="navbarHeader-listU--item"><a href="#" className="navbarHeader-listU--item-link">Users</a></li>
+                  <li className="navbarHeader-listU--item"><Link to="Post" className="navbarHeader-listU--item-link">Post</Link></li>
+                  <li className="navbarHeader-listU--item"><Link to="Comments" className="navbarHeader-listU--item-link">Comments</Link></li>
+                  <li className="navbarHeader-listU--item"><Link to="Albums" className="navbarHeader-listU--item-link">Albums</Link></li>
+                  <li className="navbarHeader-listU--item"><Link to="Photos" className="navbarHeader-listU--item-link">Photos</Link></li>
+                  <li className="navbarHeader-listU--item"><Link to="/Todos" className="navbarHeader-listU--item-link">Todos</Link></li>
+                  <li className="navbarHeader-listU--item"><Link to="/users" className="navbarHeader-listU--item-link">Users</Link></li>
 
 
               </ul>
