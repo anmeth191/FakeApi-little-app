@@ -5,11 +5,15 @@
 }
 
 /*Variables Section*/
-$universal-padding: 2rem;
+$less-padding:0.5rem;
+$first-padding:1rem;
+$second-padding: 2rem;
+$third-padding:3rem;
 $primary-color: #009688;
 $secondary-color: #00897b;
 $terciary-color: #004d40 ; 
-$onePadding: 1.5rem;
+$backgroundBody: #b0bec5 ;
+
 $circleImage: 6rem;
 $weight-font: 500;
 $font-color: #37474f;
@@ -24,8 +28,10 @@ $font-color: #37474f;
 html{
     font-size: 62.5%;
     font-family: 'Prompt', sans-serif;
+    background: $backgroundBody;
     
 }
+
 
 
 .headerMain{
@@ -57,7 +63,7 @@ html{
                 display: block;
                 text-decoration: none;
                 color: $font-color;
-                padding:1rem;
+                padding:$first-padding;
                 transition: 0.3s;
                 &:hover{
                     background: $secondary-color;
@@ -86,27 +92,31 @@ html{
     width: 80%;
     text-align: center;
     margin: 0 auto;
-
+ 
+    
 &-container{
  
   display: grid;
   grid-gap: 1rem;
   grid-template-columns:auto auto auto auto;
-  padding: $onePadding;
+  padding: $first-padding;
+  
   
   &  .userCard{
      display: block;
      padding: 1rem;
      border: 0.5px   solid $secondary-color;
      transition: 0.2s;
+     background: $primary-color;
      &:hover{
          transform: translateY(-0.5rem);
      }
 
       &-image{
            
-            background: $secondary-color;
-            padding:1.5rem;
+            background: transparent;
+            padding:$first-padding;
+            
          &-photo{
              display: inline-block;
               width: 12rem;
@@ -119,13 +129,22 @@ html{
       &-content{
      display: inline-block;
    
-     padding:1rem;
+     padding:$first-padding;
      margin-top:1rem ;
 
      &-links{
          display: block;
-         color: $font-color;
+         color: $terciary-color;
+         text-transform: uppercase;
          text-decoration: none;
+         font-weight: bold;
+         padding: $first-padding;
+         transition: 0.2s;
+
+         &:hover{
+             background: $secondary-color;
+             color: white;
+         }
     
      }
      
@@ -168,7 +187,7 @@ html{
             position: absolute;
             display: block;
             width: 100%;
-            padding: 2rem;     
+            padding: $second-padding;     
             margin: 0 auto;
             top: 50%;
             transform: translateY(-50%);
@@ -186,7 +205,7 @@ html{
 
                 & .text{ 
                     display: inline-block;
-                    padding: 0 0.8rem;
+                    padding: 0 $first-padding;
                     font-size: 1rem;
                     color:white;
                     letter-spacing: 0.02rem;
@@ -202,12 +221,46 @@ html{
                 text-align: center;
                 text-decoration: none;
                 color: white;
-                padding: 1rem;
+                padding: $first-padding;
                 background: $terciary-color;
             }
         }//end of information class
-
-        
     }//end of the content 
+}//end of info card container
 
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+//////STYLE THE POSTS CARDS
+
+.postContainer{
+    display: block;
+    background: linear-gradient(to right , $secondary-color , $terciary-color);
+    width:80%;
+    margin: 0 auto;
+    padding: $first-padding;
+
+
+    &-card{
+     background: $primary-color;
+     padding: $first-padding;
+
+     &-title-header{
+         color: white;
+         font-size: 1.2rem;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+     }
+
+     &-body-span{
+         color: white;
+         display: inline-block;
+         font-size: 1.1rem;
+         padding: $second-padding 0;
+         
+     }
+    }
 }
